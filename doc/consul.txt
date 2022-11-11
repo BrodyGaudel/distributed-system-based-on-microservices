@@ -1,0 +1,18 @@
+COMMAND TO START CONSUL
+
+consul agent -server -bootstrap-expect=1 -data-dir=consul-data -ui -bind=192.168.1.6
+--------------------------------------------------------------------------------------
+COMMAND TO START VAULT EN MODE DEVELOPPEMENT
+
+vault server -dev
+--------------------------------------------------------------------------------------
+COMMANDE POUR DEFINIR LA VARIABLE D'ENVIRONNEMENT VAULT
+
+set VAULT_ADDR=http://127.0.0.1:8200
+--------------------------------------------------------------------------------------
+Ajouter les clé/valeur 
+
+vault kv put secret/billingservice user.username=brody user.password=123456
+---------------------------------------------------------------------------------------
+Afficher les clé / valeurs
+vault kv get secret/billingservice

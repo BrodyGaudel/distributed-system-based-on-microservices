@@ -1,0 +1,10 @@
+lorsqu'on modifie une variable dans un fichier .properties, il faut d'abord faire un commit puis redemarer l'application
+-----------------------------------------------------------------------------------------------------------------------------------
+POST http://localhost:8081/actuator/refresh
+Pour rafraichier le microservice à chaud, sans le redemarer, s'il ya eu des modifications des variables dans les fichiers .properties
+--------------------------------------------------------------------------------------------------------------------------------------
+http://192.168.1.6:8082/products/9?projection=fullProduct
+
+pour consulter aussi l'id du produit car Spring Data Rest n'affiche pas l'id
+il faut donc passer par une projection
+--------------------------------------------------------------------------------------------------------------------------------------
